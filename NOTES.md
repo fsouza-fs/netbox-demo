@@ -35,7 +35,7 @@
        - **Redis**: Used by NetBox for caching and job queues.
      - Customized Netbox port in `docker-compose.override.yml`
      - Added multiple env files in `./env` for sensitive information like `POSTGRES_PASSWORD` and `SECRET_KEY`.
-     - Added 2 extra variables in `netbox.env` `no_proxy=localhost` and `ALLOWED_HOSTS=netbox.domain.net localhost`. These were needed to fix an issue with the health check not reaching the server. see: (https://github.com/netbox-community/netbox/discussions/11362).
+     - Added 2 extra variables in `netbox.env`: `no_proxy=localhost` and `ALLOWED_HOSTS=netbox.domain.net localhost`. These were needed to fix an issue with the health check not reaching the server. see: (https://github.com/netbox-community/netbox/discussions/11362).
 
    - **Initial Setup**:
      - `docker compose up -d` command failed the first time after a couple of minutes with unhealthy status, due the long database setup process. Running it again a couple of times got rid of the error.
